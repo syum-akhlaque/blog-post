@@ -1,0 +1,16 @@
+.postDetails {
+	padding: 50px;
+    text-align: center;
+    background-color: saddlebrown;
+    color: white;
+}
+.postDetails h1{
+    font-size: 45px;
+    text-transform: uppercase;
+}
+.postDetails p{
+    font-size: 25px;
+}
+.commentSection h2{
+    text-align: center;
+}

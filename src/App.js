@@ -2,6 +2,13 @@ import React, { useEffect, useState }  from 'react';
 import './App.css';
 import Header from './Components/Header/Header';
 import Blog from './Components/Blog/Blog'
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+import PostDetails from './Components/PostDetails/PostDetails';
 
 
 function App() {
@@ -14,11 +21,22 @@ function App() {
   return (
     <div>
         <Header></Header>
-         
-        {
-           articles.map(article =>  <Blog article = {article}></Blog> )
-        }
-        
+        <Router>
+         <Switch>
+           <Route exact path='/blog'>
+           <Blog articles = {articles}></Blog>
+           </Route>
+           <Route  path='/post/:postId'>
+              <PostDetails></PostDetails>
+           </Route>
+           <Route exact path='/'>
+              <Blog articles = {articles}></Blog>
+           </Route>
+           <Route path='*'>
+              <h2> 4O4  not found</h2>
+           </Route>
+         </Switch>
+       </Router>
     </div>
   );
 }

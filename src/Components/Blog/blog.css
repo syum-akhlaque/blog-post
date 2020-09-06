@@ -1,6 +1,7 @@
-.singlePost{
-    display: ruby;
-    padding: 40px;
+.singlePost {
+    	padding: 40px;
+    width: 300px;
+    display: flex;
 }
 .MuiGrid-grid-sm-3 {
 
