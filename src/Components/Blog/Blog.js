@@ -1,13 +1,7 @@
-import React from 'react';
+import React ,{ useEffect, useState } from 'react';
+import './blog.css'
 import { makeStyles } from '@material-ui/core/styles'
-import {
-    Grid,
-    Card,
-    CardContent,
-    Typography,
-    CardHeader,
-    Button 
-} from '@material-ui/core/';
+import {Grid} from '@material-ui/core/';
 import ArticleBody from './ArticleBody';
 
 const useStyles = makeStyles(theme => ({
@@ -17,12 +11,17 @@ const useStyles = makeStyles(theme => ({
     }
 }))
 
-const Blog = (props) => {
+const Blog = () => {
     const classes = useStyles()
-    const articles = props.articles;
+    const[articles, setArticle] = useState([]);
+    useEffect(()=>{
+        fetch('https://jsonplaceholder.typicode.com/posts')
+        .then(response => response.json())
+        .then(data =>  setArticle(data))
+    },[]);
+
     return (
         <div className={classes.root}>
-            
             <Grid
                 container
                 spacing={2}
@@ -31,8 +30,7 @@ const Blog = (props) => {
                 alignItems="flex-start"
             >
                 {articles.map(article => 
-                     <ArticleBody article={article} key={articles.id}></ArticleBody>
-                     
+                     <ArticleBody article={article} key={article.id} ></ArticleBody>
                     //hare grid
                 )}
             </Grid>

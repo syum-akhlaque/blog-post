@@ -14,11 +14,12 @@ const ArticleBody = (props) => {
     const sliceTitle = title.slice(0, 15);
     const sliceBody = body.slice(0, 90);
     return (
-        <>
+        <>  
             <Grid item xs={12} sm={6} md={3} key={id}>
                 <Card>
                     <CardHeader   
-                        title={`${sliceTitle}`}
+                        
+                        title={`${sliceTitle.toUpperCase()}.`}
                         subheader={`${sliceBody}`}
                     />
                     <CardContent>

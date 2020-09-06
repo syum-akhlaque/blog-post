@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import './PostDetails.css'
+import boyImg from '../FakeImage/boy.jpg';
 
 const PostDetails = () => {
     const {postId} = useParams();
@@ -28,11 +29,15 @@ const PostDetails = () => {
                 <h2 >Comments:</h2>
                 <ul>
                     {
-                        comments.map(comment => <li>
-                            <div class = "singleComment">
-                                <h4>Email: {comment.email}</h4>
-                                <p> {comment.body}</p>
-
+                        comments.map(comment => <li>     
+                            <div className = "singleComment">
+                                <div>
+                                    <img src={boyImg} alt="" width="90px"/>
+                                </div>
+                                <div>
+                                    <h4>Email: {comment.email}</h4>
+                                    <p> {comment.body}</p>
+                                </div>    
                             </div>
                         </li>)
                     }
