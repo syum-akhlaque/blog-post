@@ -18,14 +18,11 @@ const ArticleBody = (props) => {
             <Grid item xs={12} sm={6} md={3} key={id}>
                 <Card>
                     <CardHeader   
-                        
                         title={`${sliceTitle.toUpperCase()}.`}
-                        subheader={`${sliceBody}`}
-                    />
-                    <CardContent>
+                        subheader={`${sliceBody}`} />
+                    <CardContent> 
                         <Typography variant="h5" gutterBottom>
                             <Button size="small" color="primary">
-                               
                                 <Link to={`/post/${id}`}> Read More ...</Link>
                             </Button>
                         </Typography>
