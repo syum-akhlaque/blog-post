@@ -24,8 +24,8 @@ const PostDetails = () => {
                 <h1> {(article.title)}</h1>
                 <p> "{article.body}"</p> 
             </div>
-            <div>
-                <h2 className = 'commentSection'>Comments:</h2>
+            <div className = "commentSection">
+                <h2 >Comments:</h2>
                 <ul>
                     {
                         comments.map(comment => <li>

@@ -14,3 +14,13 @@
 .commentSection h2{
     text-align: center;
 }
+.singleComment {
+	border: 1px solid #eee;
+	padding: 15px 20px;
+	border-radius: 30px;
+	margin: 16px 30px 0 0;
+	background: antiquewhite;
+}
+.commentSection ul li{
+    list-style:none;
+}
