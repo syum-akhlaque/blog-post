@@ -9,6 +9,7 @@ const header = () => {
            <nav>
                <a href="/blog">BLOG</a>      
            </nav>
+           <p>Discover yourself</p>
         </div>
     );
 };
